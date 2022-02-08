@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:profile_ecoapp/src/pages/dashboard.dart';
 import 'package:profile_ecoapp/src/pages/detail_route.dart';
 
 class Routes_card extends StatelessWidget {
@@ -17,14 +17,14 @@ class Routes_card extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => DetailRoute(),
+            builder: (context) => DetailRoute(_name, _location, _imagenUrl),
           ),
         );
       },
       child: DecoratedBox(
           decoration: BoxDecoration(
-            color: Colors.blue.withOpacity(0.5),
-            borderRadius: BorderRadius.circular(5),
+            color: Colors.blue.withOpacity(0.8),
+            borderRadius: BorderRadius.circular(10),
           ),
           child: Padding(
             padding: EdgeInsets.all(10),
