@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:profile_ecoapp/src/pages/profile.dart';
 import 'package:profile_ecoapp/src/pages/dashboard.dart';
+import 'package:profile_ecoapp/src/pages/events.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -13,8 +14,9 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int currentTap = 0;
   final List<Widget> screens = [
-    Profile(),
     Dashboard(),
+    Events(),
+    Profile(),
   ];
   final PageStorageBucket bucket = PageStorageBucket();
 
@@ -54,7 +56,7 @@ class _HomePageState extends State<HomePage> {
                     minWidth: 40,
                     onPressed: () {
                       setState(() {
-                        currentScreen = Profile();
+                        currentScreen = Events();
                         currentTap = 1;
                       });
                     },
@@ -86,11 +88,11 @@ class _HomePageState extends State<HomePage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(
-                          FontAwesomeIcons.solidHeart,
+                          FontAwesomeIcons.newspaper,
                           color: currentTap == 3 ? Colors.blue : Colors.green,
                         ),
                         Text(
-                          'Favorite',
+                          'News',
                           style: TextStyle(
                               color:
                                   currentTap == 3 ? Colors.blue : Colors.green),

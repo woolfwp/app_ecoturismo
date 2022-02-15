@@ -82,6 +82,44 @@ Widget _dataUser() {
         buildTextField("Peso", "75"),
         buildTextField("Altura", "1.80 cm"),
         buildTextField("Email", "sebas@gmail.com"),
+        SizedBox(
+          height: 30,
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            RaisedButton(
+              onPressed: () {},
+              color: Colors.white,
+              padding: EdgeInsets.symmetric(horizontal: 40),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20)),
+              child: Text(
+                'CANCEL',
+                style: TextStyle(
+                  fontSize: 14,
+                  letterSpacing: 2.2,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            RaisedButton(
+              onPressed: () {},
+              color: Colors.green[600],
+              padding: EdgeInsets.symmetric(horizontal: 40),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20)),
+              child: Text(
+                'SAVE',
+                style: TextStyle(
+                  fontSize: 14,
+                  letterSpacing: 2.2,
+                  color: Colors.black,
+                ),
+              ),
+            )
+          ],
+        ),
       ],
     ),
   );
