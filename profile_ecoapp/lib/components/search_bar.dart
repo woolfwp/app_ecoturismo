@@ -14,7 +14,7 @@ class SearchBar extends StatelessWidget {
           ),
           child: TextField(
             decoration: InputDecoration.collapsed(
-              hintText: 'Search for routes',
+              hintText: 'Search',
             ),
           ),
         ),
