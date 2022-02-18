@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:profile_ecoapp/src/pages/news.dart';
 import 'package:profile_ecoapp/src/pages/profile.dart';
 import 'package:profile_ecoapp/src/pages/dashboard.dart';
 import 'package:profile_ecoapp/src/pages/events.dart';
@@ -16,6 +17,7 @@ class _HomePageState extends State<HomePage> {
   final List<Widget> screens = [
     Dashboard(),
     Events(),
+    News(),
     Profile(),
   ];
   final PageStorageBucket bucket = PageStorageBucket();
@@ -80,7 +82,7 @@ class _HomePageState extends State<HomePage> {
                     minWidth: 40,
                     onPressed: () {
                       setState(() {
-                        currentScreen = Profile();
+                        currentScreen = News();
                         currentTap = 3;
                       });
                     },
