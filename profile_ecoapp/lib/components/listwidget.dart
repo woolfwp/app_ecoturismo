@@ -9,15 +9,18 @@ Widget listWidget(ListItem item) {
       padding: EdgeInsets.all(8.0),
       child: Row(
         children: [
-          Container(
-            width: 80.0,
-            height: 80.0,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: NetworkImage(item.imgUrl),
-                fit: BoxFit.cover,
+          Hero(
+            tag: '${item.newsTitle}',
+            child: Container(
+              width: 80.0,
+              height: 80.0,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: NetworkImage(item.imgUrl),
+                  fit: BoxFit.cover,
+                ),
+                borderRadius: BorderRadius.circular(8.0),
               ),
-              borderRadius: BorderRadius.circular(8.0),
             ),
           ),
           SizedBox(

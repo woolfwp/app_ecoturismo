@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:profile_ecoapp/components/listitem.dart';
 import 'package:profile_ecoapp/components/listwidget.dart';
+import 'package:profile_ecoapp/src/pages/detail_news.dart';
 
 class News extends StatefulWidget {
   News({Key? key}) : super(key: key);
@@ -19,25 +20,25 @@ class _NewsState extends State<News> with SingleTickerProviderStateMixin {
     ),
     ListItem(
       "https://images.unsplash.com/photo-1571942347102-23df2d0ee3a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-      "Noticia 1",
+      "Noticia 2",
       "Fernado",
       "28 Jan 2020",
     ),
     ListItem(
       "https://images.unsplash.com/photo-1571942347102-23df2d0ee3a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-      "Noticia 1",
+      "Noticia 3",
       "Fernado",
       "28 Jan 2020",
     ),
     ListItem(
       "https://images.unsplash.com/photo-1571942347102-23df2d0ee3a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-      "Noticia 1",
+      "Noticia 4",
       "Fernado",
       "28 Jan 2020",
     ),
     ListItem(
       "https://images.unsplash.com/photo-1571942347102-23df2d0ee3a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-      "Noticia 1",
+      "Noticia 5",
       "Fernado",
       "28 Jan 2020",
     ),
@@ -101,13 +102,24 @@ class _NewsState extends State<News> with SingleTickerProviderStateMixin {
             padding: EdgeInsets.all(8.0),
             child: Container(
               child: ListView.builder(
-                  itemCount: _tabList.length,
-                  itemBuilder: (context, index) {
-                    return InkWell(
-                      onTap: () {},
-                      child: listWidget(listTiles[index]),
-                    );
-                  }),
+                itemCount: listTiles.length,
+                itemBuilder: (context, index) {
+                  return InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => DetailsNews(
+                            item: listTiles[index],
+                            tag: listTiles[index].newsTitle,
+                          ),
+                        ),
+                      );
+                    },
+                    child: listWidget(listTiles[index]),
+                  );
+                },
+              ),
             ),
           ),
           Padding(
