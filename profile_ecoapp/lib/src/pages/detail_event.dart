@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:profile_ecoapp/components/shedule_card.dart';
 
-class DetailRoute extends StatelessWidget {
+class DetailEvent extends StatelessWidget {
   var _name;
   var _location;
   var _imageUrl;
-  var _aboutRoute;
+  var _aboutEvent;
 
-  DetailRoute(this._name, this._location, this._imageUrl, this._aboutRoute);
+  DetailEvent(this._name, this._location, this._imageUrl, this._aboutEvent);
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class DetailRoute extends StatelessWidget {
         body: SingleChildScrollView(
           child: Container(
             child: Column(
-              children: <Widget>[
+              children: [
                 SizedBox(
                   height: 50,
                 ),
@@ -155,7 +155,7 @@ class DetailRoute extends StatelessWidget {
                           height: 10,
                         ),
                         Text(
-                          _aboutRoute,
+                          _aboutEvent,
                           style: TextStyle(
                             height: 1.6,
                             color: Colors.black.withOpacity(0.7),
@@ -165,7 +165,7 @@ class DetailRoute extends StatelessWidget {
                           height: 20,
                         ),
                         Text(
-                          'Upcoming available route',
+                          'Upcoming available event',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 18,
@@ -175,23 +175,23 @@ class DetailRoute extends StatelessWidget {
                         SizedBox(
                           height: 30,
                         ),
-                        ScheduleCard('Routes', 'Sunday. 9am - 11am', '12',
-                            'Jan', Colors.blue),
+                        ScheduleCard(_name, 'Sunday. 9am - 11am', '12', 'Jan',
+                            Colors.blue),
                         SizedBox(
                           height: 30,
                         ),
-                        ScheduleCard('Routes', 'Sunday. 9am - 11am', '13',
-                            'Jan', Colors.green),
+                        ScheduleCard(_name, 'Sunday. 9am - 11am', '13', 'Jan',
+                            Colors.green),
                         SizedBox(
                           height: 30,
                         ),
-                        ScheduleCard('Routes', 'Sunday. 9am - 11am', '14',
-                            'Jan', Colors.blue),
+                        ScheduleCard(_name, 'Sunday. 9am - 11am', '14', 'Jan',
+                            Colors.blue),
                         SizedBox(
                           height: 30,
                         ),
-                        ScheduleCard('Routes', 'Sunday. 9am - 11am', '15',
-                            'Jan', Colors.green),
+                        ScheduleCard(_name, 'Sunday. 9am - 11am', '15', 'Jan',
+                            Colors.green),
                       ],
                     ),
                   ),

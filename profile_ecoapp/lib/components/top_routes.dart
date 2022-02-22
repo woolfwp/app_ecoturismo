@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:profile_ecoapp/src/pages/dashboard.dart';
+
 import 'package:profile_ecoapp/src/pages/detail_route.dart';
 
 class Routes_card extends StatelessWidget {
@@ -7,8 +7,10 @@ class Routes_card extends StatelessWidget {
   var _location;
   var _imagenUrl;
   var _bgColor;
+  var _aboutRoute;
 
-  Routes_card(this._name, this._location, this._imagenUrl, this._bgColor);
+  Routes_card(this._name, this._location, this._imagenUrl, this._bgColor,
+      this._aboutRoute);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +19,8 @@ class Routes_card extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => DetailRoute(_name, _location, _imagenUrl),
+            builder: (context) =>
+                DetailRoute(_name, _location, _imagenUrl, _aboutRoute),
           ),
         );
       },

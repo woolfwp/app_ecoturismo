@@ -52,7 +52,7 @@ class Dashboard extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 30),
                   child: Text(
-                    'Routes',
+                    'Events',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.green[600],
@@ -96,32 +96,40 @@ class Dashboard extends StatelessWidget {
       child: Row(
         children: <Widget>[
           CategoryCard(
-            'Pico de loro \n Pance',
+            'Limpia pance',
+            'Pico de loro',
             FontAwesomeIcons.mountain,
+            'Informacion sobre el evento',
             Colors.blue[300],
           ),
           SizedBox(
             width: 30,
           ),
           CategoryCard(
-            'Ruta 2 \n Buitrera',
-            FontAwesomeIcons.tree,
+            'Limpia tu barrio',
+            'Cali',
+            FontAwesomeIcons.mountain,
+            'Informacion sobre el evento',
             Colors.blue[300],
           ),
           SizedBox(
             width: 30,
           ),
           CategoryCard(
-            'Ruta 3 \n Darien',
-            FontAwesomeIcons.water,
+            'Educate sobre nuestra region',
+            'Borajine',
+            FontAwesomeIcons.mountain,
+            'Informacion sobre el evento',
             Colors.blue[300],
           ),
           SizedBox(
             width: 30,
           ),
           CategoryCard(
-            'Ruta 4 \n Palmira',
-            FontAwesomeIcons.hotTub,
+            'Limpia pance',
+            'Buitrera',
+            FontAwesomeIcons.mountain,
+            'Informacion sobre el evento',
             Colors.blue[300],
           ),
           SizedBox(
@@ -144,6 +152,7 @@ class Dashboard extends StatelessWidget {
             'Pance',
             FontAwesomeIcons.mountain,
             Colors.black,
+            'Cuenta con 2.5km de cendero',
           ),
           SizedBox(
             height: 20,
@@ -153,6 +162,7 @@ class Dashboard extends StatelessWidget {
             'Pance',
             FontAwesomeIcons.tree,
             Colors.black,
+            'Cuenta con 3km de cendero',
           ),
           SizedBox(
             height: 20,
@@ -162,6 +172,7 @@ class Dashboard extends StatelessWidget {
             'buitrera',
             FontAwesomeIcons.water,
             Colors.black,
+            'Cuenta con 1km de cendero',
           ),
           SizedBox(
             height: 20,
@@ -171,6 +182,7 @@ class Dashboard extends StatelessWidget {
             'darien',
             FontAwesomeIcons.hotTub,
             Colors.black,
+            'Cuenta con 5km de cendero',
           ),
           SizedBox(
             height: 20,
@@ -180,6 +192,7 @@ class Dashboard extends StatelessWidget {
             'palmira',
             FontAwesomeIcons.hotel,
             Colors.black,
+            'Cuenta con 6km de cendero',
           ),
         ],
       ),
