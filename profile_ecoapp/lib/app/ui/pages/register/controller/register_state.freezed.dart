@@ -25,8 +25,8 @@ class _$RegisterStateTearOff {
       String edad = '',
       String password = '',
       String vpassword = '',
-      int peso = 0,
-      int altura = 0,
+      String peso = '',
+      String altura = '',
       bool termsOk = false}) {
     return _RegisterState(
       email: email,
@@ -53,8 +53,8 @@ mixin _$RegisterState {
   String get edad => throw _privateConstructorUsedError;
   String get password => throw _privateConstructorUsedError;
   String get vpassword => throw _privateConstructorUsedError;
-  int get peso => throw _privateConstructorUsedError;
-  int get altura => throw _privateConstructorUsedError;
+  String get peso => throw _privateConstructorUsedError;
+  String get altura => throw _privateConstructorUsedError;
   bool get termsOk => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -74,8 +74,8 @@ abstract class $RegisterStateCopyWith<$Res> {
       String edad,
       String password,
       String vpassword,
-      int peso,
-      int altura,
+      String peso,
+      String altura,
       bool termsOk});
 }
 
@@ -128,11 +128,11 @@ class _$RegisterStateCopyWithImpl<$Res>
       peso: peso == freezed
           ? _value.peso
           : peso // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       altura: altura == freezed
           ? _value.altura
           : altura // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       termsOk: termsOk == freezed
           ? _value.termsOk
           : termsOk // ignore: cast_nullable_to_non_nullable
@@ -155,8 +155,8 @@ abstract class _$RegisterStateCopyWith<$Res>
       String edad,
       String password,
       String vpassword,
-      int peso,
-      int altura,
+      String peso,
+      String altura,
       bool termsOk});
 }
 
@@ -211,11 +211,11 @@ class __$RegisterStateCopyWithImpl<$Res>
       peso: peso == freezed
           ? _value.peso
           : peso // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       altura: altura == freezed
           ? _value.altura
           : altura // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       termsOk: termsOk == freezed
           ? _value.termsOk
           : termsOk // ignore: cast_nullable_to_non_nullable
@@ -234,8 +234,8 @@ class _$_RegisterState implements _RegisterState {
       this.edad = '',
       this.password = '',
       this.vpassword = '',
-      this.peso = 0,
-      this.altura = 0,
+      this.peso = '',
+      this.altura = '',
       this.termsOk = false});
 
   @JsonKey()
@@ -258,10 +258,10 @@ class _$_RegisterState implements _RegisterState {
   final String vpassword;
   @JsonKey()
   @override
-  final int peso;
+  final String peso;
   @JsonKey()
   @override
-  final int altura;
+  final String altura;
   @JsonKey()
   @override
   final bool termsOk;
@@ -314,8 +314,8 @@ abstract class _RegisterState implements RegisterState {
       String edad,
       String password,
       String vpassword,
-      int peso,
-      int altura,
+      String peso,
+      String altura,
       bool termsOk}) = _$_RegisterState;
 
   @override
@@ -331,9 +331,9 @@ abstract class _RegisterState implements RegisterState {
   @override
   String get vpassword;
   @override
-  int get peso;
+  String get peso;
   @override
-  int get altura;
+  String get altura;
   @override
   bool get termsOk;
   @override

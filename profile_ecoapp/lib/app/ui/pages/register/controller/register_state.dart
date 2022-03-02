@@ -11,8 +11,8 @@ class RegisterState with _$RegisterState {
     @Default('') String edad,
     @Default('') String password,
     @Default('') String vpassword,
-    @Default(0) int peso,
-    @Default(0) int altura,
+    @Default('') String peso,
+    @Default('') String altura,
     @Default(false) bool termsOk,
   }) = _RegisterState;
 
