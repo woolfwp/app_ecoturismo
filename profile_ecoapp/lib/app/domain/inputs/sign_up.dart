@@ -1,8 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 
 class SignUpData {
-  final String name, lastname, edad, email, password;
-  final int peso, altura;
+  final String name, lastname, edad, email, password, peso, altura;
 
   SignUpData({
     required this.name,

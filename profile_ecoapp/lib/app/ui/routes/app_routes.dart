@@ -1,3 +1,5 @@
+import 'dart:js';
+
 import 'package:flutter/widgets.dart' show BuildContext, Container, Widget;
 import 'package:profile_ecoapp/app/ui/pages/home/dashboard.dart';
 import 'package:profile_ecoapp/app/ui/pages/login/loginPage.dart';

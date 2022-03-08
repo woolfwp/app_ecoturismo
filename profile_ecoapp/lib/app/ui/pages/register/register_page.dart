@@ -3,6 +3,7 @@ import 'package:flutter_meedu/state.dart';
 import 'package:profile_ecoapp/app/ui/gobal_widgets/custom_input_field.dart';
 import 'package:profile_ecoapp/app/ui/pages/register/controller/register_controller.dart';
 import 'package:profile_ecoapp/app/ui/pages/register/controller/register_state.dart';
+
 import 'package:profile_ecoapp/app/utils/email_validator.dart';
 import 'package:profile_ecoapp/app/utils/name_validator.dart';
 import 'package:profile_ecoapp/app/utils/number_validator.dart';
@@ -114,29 +115,31 @@ class RegisterPage extends StatelessWidget {
                     const SizedBox(
                       height: 15,
                     ),
-                    Consumer(builder: (_, watch, __) {
-                      watch(
-                        registerProvaider.select(
-                          (_) => _.password,
-                        ),
-                      );
-                      return CustomInputField(
-                        label: "Verification password",
-                        onChanged: controller.onVpasswordChanged,
-                        isPassword: true,
-                        validator: (text) {
-                          if (text == null) return null;
-                          if (controller.state.password != text) {
-                            return "Password don't match";
-                          }
-                          if (text.trim().length >= 6) {
-                            return null;
-                          }
+                    Consumer(
+                      builder: (_, watch, __) {
+                        watch(
+                          registerProvaider.select(
+                            (_) => _.password,
+                          ),
+                        );
+                        return CustomInputField(
+                          label: "Verification password",
+                          onChanged: controller.onVpasswordChanged,
+                          isPassword: true,
+                          validator: (text) {
+                            if (text == null) return null;
+                            if (controller.state.password != text) {
+                              return "Password don't match";
+                            }
+                            if (text.trim().length >= 6) {
+                              return null;
+                            }
 
-                          return "Invalid password";
-                        },
-                      );
-                    }),
+                            return "Invalid password";
+                          },
+                        );
+                      },
+                    ),
                   ],
                 ),
               ),
